@@ -13,6 +13,9 @@
 		4EA073632529A5CB008DA80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA073612529A5CB008DA80E /* Main.storyboard */; };
 		4EA073652529A5CE008DA80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA073642529A5CE008DA80E /* Assets.xcassets */; };
 		4EA073682529A5CE008DA80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA073662529A5CE008DA80E /* LaunchScreen.storyboard */; };
+		4EA0737025319EEE008DA80E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0736F25319EEE008DA80E /* GameScene.swift */; };
+		4EA07373253BDD14008DA80E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA07372253BDD14008DA80E /* AudioToolbox.framework */; };
+		4EA07376253C702C008DA80E /* mens-yeah1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA07375253C702B008DA80E /* mens-yeah1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		4EA073642529A5CE008DA80E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EA073672529A5CE008DA80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EA073692529A5CE008DA80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EA0736F25319EEE008DA80E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		4EA07372253BDD14008DA80E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4EA07375253C702B008DA80E /* mens-yeah1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mens-yeah1.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA07373253BDD14008DA80E /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,7 @@
 			children = (
 				4EA0735A2529A5CB008DA80E /* FlappyBird */,
 				4EA073592529A5CB008DA80E /* Products */,
+				4EA07371253BDD13008DA80E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +64,7 @@
 		4EA0735A2529A5CB008DA80E /* FlappyBird */ = {
 			isa = PBXGroup;
 			children = (
+				4EA07379253C70E6008DA80E /* sound */,
 				4EA0735B2529A5CB008DA80E /* AppDelegate.swift */,
 				4EA0735D2529A5CB008DA80E /* SceneDelegate.swift */,
 				4EA0735F2529A5CB008DA80E /* ViewController.swift */,
@@ -63,8 +72,25 @@
 				4EA073642529A5CE008DA80E /* Assets.xcassets */,
 				4EA073662529A5CE008DA80E /* LaunchScreen.storyboard */,
 				4EA073692529A5CE008DA80E /* Info.plist */,
+				4EA0736F25319EEE008DA80E /* GameScene.swift */,
 			);
 			path = FlappyBird;
+			sourceTree = "<group>";
+		};
+		4EA07371253BDD13008DA80E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EA07372253BDD14008DA80E /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EA07379253C70E6008DA80E /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				4EA07375253C702B008DA80E /* mens-yeah1.mp3 */,
+			);
+			name = sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA07376253C702C008DA80E /* mens-yeah1.mp3 in Resources */,
 				4EA073682529A5CE008DA80E /* LaunchScreen.storyboard in Resources */,
 				4EA073652529A5CE008DA80E /* Assets.xcassets in Resources */,
 				4EA073632529A5CB008DA80E /* Main.storyboard in Resources */,
@@ -140,6 +167,7 @@
 			files = (
 				4EA073602529A5CB008DA80E /* ViewController.swift in Sources */,
 				4EA0735C2529A5CB008DA80E /* AppDelegate.swift in Sources */,
+				4EA0737025319EEE008DA80E /* GameScene.swift in Sources */,
 				4EA0735E2529A5CB008DA80E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +321,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.hiroki.nakai.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.hiroki.nakai.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
